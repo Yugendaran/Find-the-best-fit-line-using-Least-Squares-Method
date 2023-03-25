@@ -17,58 +17,38 @@ To implement univariate Linear Regression to fit a straight line using least squ
 6. Obtain the straight line equation Y=mX+b and plot the scatterplot.
 
 ## Program:
-```
 
 Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by: Udayanithi N
-RegisterNumber:  212221220056
 
-import matplotlib.pyplot as plt
-x=[5,6,3,2,6,7,1,2]
-y=[2,3,6,5,8,3,5,8]
-plt.scatter(x,y)
-plt.show()
+Developed by:Kathirvelan.K
 
+RegisterNumber:212221220026
+``` 
 import numpy as np
 import matplotlib.pyplot as plt
-
-#assign input
-x=np.array([0,1,2,3,4,5,6,7,8,9])
-y=np.array([1,3,2,5,7,8,8,9,10,12])
-
-#mean values of input
+x=np.array(eval(input()))
+y=np.array(eval(input()))
 x_mean=np.mean(x)
-print(x_mean)
 y_mean=np.mean(y)
-print(y_mean)
-
-num=0
-denum=0
-
+num,denum=0,0
 for i in range(len(x)):
   num+=(x[i]-x_mean)*(y[i]-y_mean)
   denum+=(x[i]-x_mean)**2
-
-#find m
 m=num/denum
-
-#find b
 b=y_mean-m*x_mean
-print("m",m)
-print("b",b)
-
-#find y_pred
-y_pred=m*x+b
-print(y_pred)
-
-#plot graph
+print("Slope=",m)
+print("\n",b)
+y_predicted=m*x+b
+print(y_predicted)
+y_predict1=m*3+b
+print("if x=3:",y_predict1)
 plt.scatter(x,y)
-plt.plot(x,y_pred,color='green')
-plt.show() 
+plt.plot(x,y_predicted,color='blue')
+plt.show()
 ```
 
 ## Output:
-![op1](https://user-images.githubusercontent.com/117006918/198871218-f48e2dc5-1598-40c6-8e4a-1fdbd63d7817.png)
+![GitHub Logo](./image/exp1.png)
 
 
 ## Result:
