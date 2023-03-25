@@ -48,7 +48,7 @@ plt.show()
 ```
 
 ## Output:
-![GitHub Logo](./image/exp1.png)
+(./image/exp1.png)
 
 
 ## Result:
